@@ -28,6 +28,7 @@
         </nav>
     </header>
 
+    <!-- Carousel -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -196,13 +197,67 @@
                     <a href="#inam" class="carousel-control-next" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-
                 </div>
-
             </div>
-
         </div>
     </div>
+    <!-- Carousel -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="ModalLongTitle">Bienvenido a Savelt</h3>
+                <button type="button" class="btn btn-link" id="modal-next">Next</button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-load-pages">
+                    <div id="modal-win-0" class="modal-window" style="display: block;">
+                        <img src="Img/chancho.jpeg" alt="chancho" class="img-modal">
+                        <h4>Una app inteligente para ahorrar.</h4>
+                        <div class="subtext">
+                            Porque todas las personas tienen derecho a recibir orientación financiera necesaria para poder alcanzar sus objetivos de vida, sean cuales sean.
+                        </div>
+                    </div>
+                    <div id="modal-win-1" class="modal-window">
+                        <img src="Img/planta.jpeg" alt="chancho" class="img-modal">
+                        <h4>¿Sabes que debes hacer para alcanzar tus objetivos?</h4>
+                        <div class="subtext">
+                            Organizamos y optimizamos tu ahorro para que puedas alcanzar tus objetivos de manera sencilla y eficiente.
+                        </div>
+                    </div>
+                    <div id="modal-win-2" class="modal-window">
+                        <img src="Img/diana.jpeg" alt="chancho" class="img-modal">
+                        <h4>Alcanzar tus objetivos nunca había sido tan facil</h4>
+                        <div class="subtext">
+                            Nosotros nos encargamos de todo. Nuestro algoritmo optimiza tu ahorro y analiza el progreso de tus objetivos para que puedas alcanzarlos a tiempo.
+                        </div>
+                    </div>
+                    <div id="modal-win-3" class="modal-window">
+                        <img src="Img/manos.jpeg" alt="chancho" class="img-modal">
+                        <h4>Entendemos que a veces ahorrar no es tarea fácil</h4>
+                        <div class="subtext">
+                            Pero no te preocupes. Te damos recomendaciones personalizadas para encaminar tu ahorro si es necesario.
+                        </div>
+                    </div>
+                </div>
+                <div id="modal-bullets">
+                    <div id="bullets">
+                        <span id="bullets-0" class="dot is-active"></span>
+                        <span id="bullets-1" class="dot"></span>
+                        <span id="bullets-2" class="dot"></span>
+                        <span id="bullets-3" class="dot"></span>
+                    </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Modal -->
 
     <!-- Footer -->
     <footer class="page-footer font-small cyan darken-3">
@@ -271,6 +326,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+
+    <!-- Load del modal -->
+    <script type="text/javascript">
+    $(window).on('load',function(){
+        $('#exampleModalCenter').modal('show');
+    });</script>
+    
 </body>
 
 </html>

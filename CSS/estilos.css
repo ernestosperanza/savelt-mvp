@@ -23,6 +23,7 @@ nav {
 }
 
 footer {
+    position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
@@ -42,10 +43,62 @@ footer {
     margin-top: 8%;
 }
 
-#whats-new {
-    background-color: #EEF4ED;
+
+/* Modal CSS */
+
+.dot {
+    height: 9px;
+    width: 9px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
 }
 
+.modal-content {
+    border-radius: 20px;
+    border: none;
 
+}
 
+.is-active {
+    background-color: blue;
+}
 
+.modal-body {
+    padding: 1.3rem;
+}
+
+.modal-window, .modal-title {
+    padding: 1rem;
+    text-align: center;
+}
+
+#modal-next {
+    margin-top: 1rem;
+}
+
+#bullets {
+    padding-left: 45%;
+    width: fit-content;
+}
+
+.modal-window {
+    display: none;
+}
+
+.modal-header .close {
+    margin-top: 1rem;
+    padding: 1rem;
+    margin: 0px 0px 0px 0px;
+}
+
+.modal-header {
+    padding: 5px 5px 5px 5px;
+}
+
+.img-modal {
+    border-radius: 50%;
+    width: 40%;
+    height: auto;
+    margin-bottom: 8%;
+}
