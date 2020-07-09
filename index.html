@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JS tags -->
+    <script src="js/clases.js"></script>
     <script src="js/app.js"></script>
     <!-- Boostrap tags -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -22,8 +23,8 @@
     <header>
         <nav class="navbar navbar-light">
             <a class="navbar-brand" href="#">
-                <i class="fas fa-globe"></i>
-                Savelt
+                <i class="fas fa-globe" id="icon-nav"></i>
+                <h2 id="nav-title">Savelt</h2>
             </a>
         </nav>
     </header>
@@ -44,7 +45,8 @@
                                             <img src="Img/capital.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Crecer mi capital</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Crecer mi capital">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -56,7 +58,8 @@
                                             <img src="Img/fondo_de_emergencia.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Fondo de emergencia</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Fondo de emergencia">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +71,8 @@
                                             <img src="Img/viaje.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Viaje soñado</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Viaje soñado">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +84,8 @@
                                             <img src="Img/auto.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Comprar el auto</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Comprar el auto">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +97,8 @@
                                             <img src="Img/reforma_del_hogar.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Reforma del hogar</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Reforma del hogar">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +110,8 @@
                                             <img src="Img/negocio.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Abrir mi negocio</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Abrir mi negocio">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div> <!-- Card 6 -->
@@ -121,7 +128,8 @@
                                             <img src="Img/regalo.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Regalo</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Regalo">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +141,8 @@
                                             <img src="Img/evento.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Entrada para evento</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Entrada para evento">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +154,8 @@
                                             <img src="Img/retiro.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Retiro Temprano</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Retiro Temprano">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +167,8 @@
                                             <img src="Img/estudio.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Mi Educacción</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Mi Educacción">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +180,8 @@
                                             <img src="Img/boda.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Mi Boda</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="Mi Boda">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +193,8 @@
                                             <img src="Img/ahorro1.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Objetivo Personalizado</h4>
-                                                <button type="button" class="btn btn-warning">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
+                                                data-target="#formModal" data-whatever="">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div> <!-- Card 6 -->
@@ -203,61 +216,105 @@
     </div>
     <!-- Carousel -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- Modal onLoad -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title" id="ModalLongTitle">Bienvenido a Savelt</h3>
-                <button type="button" class="btn btn-link" id="modal-next">Next</button>
-            </div>
-            <div class="modal-body">
-                <div id="modal-load-pages">
-                    <div id="modal-win-0" class="modal-window" style="display: block;">
-                        <img src="Img/chancho.jpeg" alt="chancho" class="img-modal">
-                        <h4>Una app inteligente para ahorrar.</h4>
-                        <div class="subtext">
-                            Porque todas las personas tienen derecho a recibir orientación financiera necesaria para poder alcanzar sus objetivos de vida, sean cuales sean.
-                        </div>
-                    </div>
-                    <div id="modal-win-1" class="modal-window">
-                        <img src="Img/planta.jpeg" alt="chancho" class="img-modal">
-                        <h4>¿Sabes que debes hacer para alcanzar tus objetivos?</h4>
-                        <div class="subtext">
-                            Organizamos y optimizamos tu ahorro para que puedas alcanzar tus objetivos de manera sencilla y eficiente.
-                        </div>
-                    </div>
-                    <div id="modal-win-2" class="modal-window">
-                        <img src="Img/diana.jpeg" alt="chancho" class="img-modal">
-                        <h4>Alcanzar tus objetivos nunca había sido tan facil</h4>
-                        <div class="subtext">
-                            Nosotros nos encargamos de todo. Nuestro algoritmo optimiza tu ahorro y analiza el progreso de tus objetivos para que puedas alcanzarlos a tiempo.
-                        </div>
-                    </div>
-                    <div id="modal-win-3" class="modal-window">
-                        <img src="Img/manos.jpeg" alt="chancho" class="img-modal">
-                        <h4>Entendemos que a veces ahorrar no es tarea fácil</h4>
-                        <div class="subtext">
-                            Pero no te preocupes. Te damos recomendaciones personalizadas para encaminar tu ahorro si es necesario.
-                        </div>
-                    </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="ModalLongTitle">Bienvenido a Savelt</h3>
+                    <button type="button" class="btn btn-link" id="modal-next">Next</button>
                 </div>
-                <div id="modal-bullets">
-                    <div id="bullets">
-                        <span id="bullets-0" class="dot is-active"></span>
-                        <span id="bullets-1" class="dot"></span>
-                        <span id="bullets-2" class="dot"></span>
-                        <span id="bullets-3" class="dot"></span>
+                <div class="modal-body">
+                    <div id="modal-load-pages">
+                        <div id="modal-win-0" class="modal-window" style="display: block;">
+                            <img src="Img/chancho.jpeg" alt="chancho" class="img-modal">
+                            <h4>Una app inteligente para ahorrar.</h4>
+                            <div class="subtext">
+                                Porque todas las personas tienen derecho a recibir orientación financiera necesaria para
+                                poder alcanzar sus objetivos de vida, sean cuales sean.
+                            </div>
+                        </div>
+                        <div id="modal-win-1" class="modal-window">
+                            <img src="Img/planta.jpeg" alt="chancho" class="img-modal">
+                            <h4>¿Sabes que debes hacer para alcanzar tus objetivos?</h4>
+                            <div class="subtext">
+                                Organizamos y optimizamos tu ahorro para que puedas alcanzar tus objetivos de manera
+                                sencilla y eficiente.
+                            </div>
+                        </div>
+                        <div id="modal-win-2" class="modal-window">
+                            <img src="Img/diana.jpeg" alt="chancho" class="img-modal">
+                            <h4>Alcanzar tus objetivos nunca había sido tan facil</h4>
+                            <div class="subtext">
+                                Nosotros nos encargamos de todo. Nuestro algoritmo optimiza tu ahorro y analiza el
+                                progreso de tus objetivos para que puedas alcanzarlos a tiempo.
+                            </div>
+                        </div>
+                        <div id="modal-win-3" class="modal-window">
+                            <img src="Img/manos.jpeg" alt="chancho" class="img-modal">
+                            <h4>Entendemos que a veces ahorrar no es tarea fácil</h4>
+                            <div class="subtext">
+                                Pero no te preocupes. Te damos recomendaciones personalizadas para encaminar tu ahorro
+                                si es necesario.
+                            </div>
+                        </div>
                     </div>
+                    <div id="modal-bullets">
+                        <div id="bullets">
+                            <span id="bullets-0" class="dot is-active"></span>
+                            <span id="bullets-1" class="dot"></span>
+                            <span id="bullets-2" class="dot"></span>
+                            <span id="bullets-3" class="dot"></span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-  
-            </div>
-          </div>
         </div>
-      </div>
-    <!-- Modal -->
+    </div>
+    <!-- Modal onLoad -->
+
+    <!-- Modal Form -->
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Objetivo:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-objetivo">
+                        <div class="form-group">
+                            <label for="nombre-objetivo" class="col-form-label">Nombre de tu objetivo:</label>
+                            <input type="text" class="form-control" id="nombre-objetivo" maxlength="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha-objetivo" class="col-form-label">Fecha en la que deseas alcanzar el objetivo:</label>
+                            <input type="date" class="form-control" id="fecha-objetivo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="valor-objetivo" class="col-form-label">Valor del objetivo:</label>
+                            <input type="number" class="form-control" id="valor-objetivo" placeholder="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="capitalInicial-objetivo" class="col-form-label">Dinero ya ahorrado:</label>
+                            <input type="number" class="form-control" id="capitalInicial-objetivo" placeholder="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" id="nuevo-objetivo-btn">Crear Objetivo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Form -->
 
     <!-- Footer -->
     <footer class="page-footer font-small cyan darken-3">
@@ -301,7 +358,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4">
                     <!-- Copyright -->
-                    <div class="footer-copyright white-text text-right">© 2020 Savelt - Made in 🇺🇾
+                    <div class="footer-copyright white-text text-right">© 2020 Savelt - Made with in 🇺🇾
                     </div>
                     <!-- Copyright -->
 
@@ -329,10 +386,20 @@
 
     <!-- Load del modal -->
     <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#exampleModalCenter').modal('show');
-    });</script>
-    
+        $(window).on('load', function () {
+            $('#exampleModalCenter').modal('show');});
+            </script>
+    <!-- Script Modal Form -->
+    <script type="text/javascript">
+        $('#formModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var objetivo = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('.modal-title').text('Nuevo objetivo - ' + objetivo)
+        modal.find('.modal-body input').val(objetivo)
+    })</script>
 </body>
 
 </html>

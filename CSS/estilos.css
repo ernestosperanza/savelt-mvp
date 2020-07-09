@@ -6,6 +6,15 @@ nav {
     background-color: #EEF4ED;
 }
 
+#nav-title {
+    color: #ffc107; 
+    display: inline;
+}
+
+#icon-nav{ 
+    margin: 0.5rem;
+}
+
 .container-fluid {
     margin: 30px 0;
 }
