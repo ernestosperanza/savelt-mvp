@@ -7,12 +7,13 @@ nav {
 }
 
 #nav-title {
-    color: #ffc107; 
+    color: #0B2545; 
     display: inline;
 }
 
 #icon-nav{ 
-    margin: 0.5rem;
+    margin:0.8rem;
+    color: #13315C;
 }
 
 .container-fluid {
@@ -70,7 +71,7 @@ footer {
 }
 
 .is-active {
-    background-color: blue;
+    background-color: #13315C;
 }
 
 .modal-body {
@@ -105,9 +106,22 @@ footer {
     padding: 5px 5px 5px 5px;
 }
 
+.hide {
+    display: none;
+}
+
 .img-modal {
     border-radius: 50%;
     width: 40%;
     height: auto;
     margin-bottom: 8%;
+}
+
+.nav-item.dropdown{
+    list-style: none;
+    margin-right: 39px;
+}
+
+#alertPorMes {
+    text-align: center;
 }

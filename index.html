@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JS tags -->
-    <script src="js/clases.js"></script>
-    <script src="js/app.js"></script>
     <!-- Boostrap tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -15,17 +14,30 @@
     <!-- Font Awesome tag -->
     <script src="https://kit.fontawesome.com/f78c8a1363.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/estilos.css">
+    <!-- JS tags -->
+    <script src="js/clases.js"></script>
+    <script src="js/app.js"></script>
     <title>Savelt - Home</title>
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-light navbar-inverse">
             <a class="navbar-brand" href="#">
                 <i class="fas fa-globe" id="icon-nav"></i>
-                <h2 id="nav-title">Savelt</h2>
-            </a>
+                <h2 id="nav-title">Savelt</h2></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Objetivos</a>
+                      <a class="dropdown-item" href="#">Perfil</a>
+                      <a class="dropdown-item" href="#">Salir</a>
+                    </div>
+                  </li>   
+                </ul>
         </nav>
     </header>
 
@@ -45,8 +57,9 @@
                                             <img src="Img/capital.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Crecer mi capital</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Crecer mi capital">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Crecer mi capital">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -58,8 +71,9 @@
                                             <img src="Img/fondo_de_emergencia.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Fondo de emergencia</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Fondo de emergencia">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Fondo de emergencia">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -71,8 +85,9 @@
                                             <img src="Img/viaje.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Viaje soñado</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Viaje soñado">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Viaje soñado">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -84,8 +99,9 @@
                                             <img src="Img/auto.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Comprar el auto</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Comprar el auto">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Comprar el auto">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -97,8 +113,9 @@
                                             <img src="Img/reforma_del_hogar.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Reforma del hogar</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Reforma del hogar">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Reforma del hogar">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -110,8 +127,9 @@
                                             <img src="Img/negocio.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Abrir mi negocio</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Abrir mi negocio">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Abrir mi negocio">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div> <!-- Card 6 -->
@@ -128,8 +146,8 @@
                                             <img src="Img/regalo.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Regalo</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Regalo">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal" data-whatever="Regalo">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -141,8 +159,9 @@
                                             <img src="Img/evento.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Entrada para evento</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Entrada para evento">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Entrada para evento">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -154,8 +173,9 @@
                                             <img src="Img/retiro.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Retiro Temprano</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Retiro Temprano">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Retiro Temprano">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -167,8 +187,9 @@
                                             <img src="Img/estudio.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Mi Educacción</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Mi Educacción">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal"
+                                                    data-whatever="Mi Educacción">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -180,8 +201,8 @@
                                             <img src="Img/boda.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Mi Boda</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="Mi Boda">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal" data-whatever="Mi Boda">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -193,8 +214,8 @@
                                             <img src="Img/ahorro1.jpeg" class="card-img-top">
                                             <div class="card-body">
                                                 <h4 class="card-title">Objetivo Personalizado</h4>
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" 
-                                                data-target="#formModal" data-whatever="">Ahorrar</button>
+                                                <button type="button" class="btn btn-warning" data-toggle="modal"
+                                                    data-target="#formModal" data-whatever="">Ahorrar</button>
                                             </div>
                                         </div>
                                     </div> <!-- Card 6 -->
@@ -289,22 +310,33 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="alert alert-success hide" role="alert" id="alert1">
+                        El objetivo se creo con exito
+                    </div>
+                    <div class="alert alert-danger hide" role="alert" id="error1"></div>
                     <form id="form-objetivo">
                         <div class="form-group">
                             <label for="nombre-objetivo" class="col-form-label">Nombre de tu objetivo:</label>
                             <input type="text" class="form-control" id="nombre-objetivo" maxlength="50" required>
                         </div>
                         <div class="form-group">
-                            <label for="fecha-objetivo" class="col-form-label">Fecha en la que deseas alcanzar el objetivo:</label>
+                            <label for="fecha-objetivo" class="col-form-label">Fecha en la que deseas alcanzar el
+                                objetivo:</label>
                             <input type="date" class="form-control" id="fecha-objetivo" required>
                         </div>
                         <div class="form-group">
                             <label for="valor-objetivo" class="col-form-label">Valor del objetivo:</label>
-                            <input type="number" class="form-control" id="valor-objetivo" placeholder="0" required>
+                            <input type="number" class="form-control" id="valor-objetivo" min="100" placeholder="0" required>
                         </div>
                         <div class="form-group">
                             <label for="capitalInicial-objetivo" class="col-form-label">Dinero ya ahorrado:</label>
                             <input type="number" class="form-control" id="capitalInicial-objetivo" placeholder="0">
+                        </div>
+                        <div class="alert alert-primary hide" role="alert" id="alertPorMes">
+                            <h4 class="alert-heading">Ahorro Planeado: </h4>
+                            <h5>$<span id="sumaPorMes"></span>/mes</h5>
+                            <hr>
+                            <p class="mb-0 text-muted">Cantidad que debes ahorar por mes para alcanzar el objetivo.</p>
                         </div>
                     </form>
                 </div>
@@ -383,23 +415,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-
-    <!-- Load del modal -->
-    <script type="text/javascript">
-        $(window).on('load', function () {
-            $('#exampleModalCenter').modal('show');});
-            </script>
-    <!-- Script Modal Form -->
-    <script type="text/javascript">
-        $('#formModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var objetivo = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('Nuevo objetivo - ' + objetivo)
-        modal.find('.modal-body input').val(objetivo)
-    })</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
