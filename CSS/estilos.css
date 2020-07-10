@@ -35,8 +35,6 @@ nav {
 footer {
     position: absolute;
     width: 100%;
-    left: 0;
-    bottom: 0;
     height: 80px;
     background-color: #0B2545;
 }
@@ -51,6 +49,10 @@ footer {
 
 .footer-copyright {
     margin-top: 8%;
+}
+
+.carousel-inner {
+    margin: 3%;
 }
 
 
