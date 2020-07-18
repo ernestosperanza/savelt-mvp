@@ -27,11 +27,16 @@
             <a class="navbar-brand" href="#">
                 <i class="fas fa-globe" id="icon-nav"></i>
                 <h2 id="nav-title">Savelt</h2></a>
+                <div>
+                    <button class="btn btn-outline-dark" id="crear-objetivos" data-toggle="modal"
+                            data-target="#formModal"  data-whatever="Personalizado">Crear Objetivo</button>
+                    <button class="btn btn-outline-dark" id="objetivos" >Mis Objetivos</button>
+                </div>
         </nav>
     </header>
 
     <!-- Carousel -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="carousel-objetivos">
         <div class="row">
             <div class="col-sm-12">
                 <div id="inam" class="carousel slide" data-ride="carousel">
@@ -211,20 +216,21 @@
                                 </div>
                             </div>
                         </div>
-
+                        <a href="#inam" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span></a>
+                        <a href="#inam" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span></a>
                     </div> <!-- Carousel Inner -->
-
-                    <a href="#inam" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a href="#inam" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Carousel -->
+
+    <!-- Historial Objetivos -->
+    <div id="historial-objetivos" class="hide container-fluid">
+    </div>
+    <!-- Historial Objetivos -->
 
     <!-- Modal onLoad -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"

@@ -21,15 +21,26 @@ nav {
 }
 
 .card {
+    width: fit-content;
     background-color: #EEF4ED;
     border-radius: 10px;
-    margin-top: 5%;
-    width: 300px;
+    margin-top: 3%;
+    padding-right: 0;
 }
 
 .card-img-top {
+    width: 300px;
     padding: 2%;
     border-radius: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.card h4 {
+    font-size: 20px;
 }
 
 footer {
@@ -53,6 +64,16 @@ footer {
 
 .carousel-inner {
     margin: 3%;
+}
+
+.img-objetivos {
+    width: 100px;
+    height: auto;
+    float: left;
+}
+
+.card-objetivos p {
+    float: right;
 }
 
 
