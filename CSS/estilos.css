@@ -67,13 +67,26 @@ footer {
 }
 
 .img-objetivos {
-    width: 100px;
+    width: -webkit-fill-available;
     height: auto;
     float: left;
 }
 
-.card-objetivos p {
+.separadores {
+    display: block;
+}
+
+.card-objetivos {
+    width: auto;
+}
+
+.objetivo-deadline {
+    font-size: small;
     float: right;
+}
+
+.objetivo-final {
+    float:right:
 }
 
 

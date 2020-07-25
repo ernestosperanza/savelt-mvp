@@ -23,26 +23,48 @@ function main() {
         modal.find('.modal-title').text(objetivo)
         modal.find('.modal-body input').val(objetivo)
     });
-    sistema.agregarObjetivoSistema(new Objetivo("Personalizado","2020-08-17", 1000, 0, 1));
+    sistema.agregarObjetivoSistema(new Objetivo("Personalizado","2020-08-17", 1000, 800, 1));
     sistema.agregarObjetivoSistema(new Objetivo("Fondo de emergencia","2022-06-01", 50000, 100, 2));
-    sistema.agregarObjetivoSistema(new Objetivo("Viaje soñado","2020-12-17", 10780, 0, 3));
+    sistema.agregarObjetivoSistema(new Objetivo("Viaje soñado","2020-12-17", 10780, 5000, 3));
 }
 
 function mostrarObjetivo() {
     $("#carousel-objetivos").addClass('hide');
+    $("#objetivos").addClass('hide')
+
     // Armar el historial
     $("#historial-objetivos").removeClass('hide');
+    $("#crear-objetivos").removeClass('hide');
+
     let padre = document.getElementById("historial-objetivos");
+    padre.innerHTML = "";
     
     for (let objetivo of sistema.objetivos) {
+
+        let fecha = formatearFecha(objetivo.deadLine);
+        let porcentaje = 0;
+        if(objetivo.capitalActual > 0) {
+            porcentaje = Math.floor((objetivo.capitalActual/objetivo.objetivo)*100);
+        }
+
         let newDiv = document.createElement("div");
         newDiv.innerHTML = `<div class="col-sm-12 col-lg-4">
                                 <div class="card card-objetivos">
                                     <div class="card-body">
-                                    <img src="Img/objetivos-img.jpg" class="card-img-top img-objetivos">
-                                    <p class="card-title text-muted" style="font-size: smaller">Finalizacion: ${objetivo.deadLine}</p>
-                                    <p class="card-title">Objetivo: ${objetivo.nombre}</p>
-                                    <p class="card-title">Objetivo final: ${objetivo.objetivo}</p>
+                                        <img src="Img/objetivo-roma.jpg" class="card-img-top img-objetivos">
+                                        <div class="separadores">
+                                            <p class="objetivo-deadline text-muted" style="font-size: smaller">Finaliza ${fecha}</p>
+                                            <p class="card-title">${objetivo.nombre}</p>
+                                        </div>
+                                        <div class="separadores">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: ${porcentaje}%" aria-valuenow="${porcentaje}" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                                <div>
+                                                    <p style="float: left;">$${objetivo.capitalActual}</p>
+                                                    <p style="float: right;">$${objetivo.objetivo}</p>
+                                                </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>`
@@ -53,14 +75,10 @@ function mostrarObjetivo() {
 
 function objetivos() {
     $("#carousel-objetivos").removeClass('hide');
+    $("#objetivos").removeClass('hide')
+
     $("#historial-objetivos").addClass('hide');
-    $('#formModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget)
-        var objetivo = button.data('whatever')
-        var modal = $(this)
-        modal.find('.modal-title').text(objetivo)
-        modal.find('.modal-body input').val(objetivo)
-    });
+    $("#crear-objetivos").addClass('hide');
 }
 
 function calcularPorMes() {
@@ -120,10 +138,11 @@ function crearObjetivo() {
         valorObjetivo.reportValidity() && capitalInicial.reportValidity() && fechaObjetivo.value > today) {
 
         let objetivo = new Objetivo(nombreObjetivo.value,
-            fechaObjetivo.value,
-            valorObjetivo.value,
-            capitalInicial.value,
-            (sistema.objetivos.length + 1));
+                                    fechaObjetivo.value,
+                                    valorObjetivo.value,
+                                    capitalInicial.value,
+                                    (sistema.objetivos.length + 1));
+                                    
         sistema.agregarObjetivoSistema(objetivo);
         $('#alert1').removeClass('hide');
         setTimeout(function () {
@@ -137,6 +156,22 @@ function crearObjetivo() {
             $('#error1').addClass('hide');
         }, 2000);
     }
+}
+
+function formatearFecha(date) {
+    let fecha = new Date(date);
+    mes = fecha.getMonth();
+
+    day = fecha.getDate();
+    year = fecha.getFullYear();
+
+    let meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+                 'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Dic'];
+
+    if (day.length < 2) {
+        day = '0' + day }
+        
+    return `${day} ${meses[mes]} ${year}`;
 }
 
 function formatDate(date) {

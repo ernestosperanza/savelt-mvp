@@ -1,10 +1,14 @@
 class Objetivo {
-    constructor(nombre, deadLine, objetivo, capitalInicial, id) {
+    constructor(nombre, deadLine, objetivo, capitalActual, id) {
         this.nombre = nombre;
         this.deadLine = deadLine;
         this.objetivo = objetivo;
-        this.capitalInicial = capitalInicial;
+        this.capitalActual = capitalActual;
         this.id = id;
+    }
+
+    calcularRestante() {
+        return this.objetivo - this.capitalActual;
     }
 }
 
@@ -17,3 +21,5 @@ class Sistema {
     }
 }
 
+
+/// Aux ///
