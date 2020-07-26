@@ -23,6 +23,9 @@ function main() {
         modal.find('.modal-title').text(objetivo)
         modal.find('.modal-body input').val(objetivo)
     });
+
+    $('[data-toggle="tooltip"]').tooltip();
+
     sistema.agregarObjetivoSistema(new Objetivo("Personalizado","2020-08-17", 1000, 800, 1));
     sistema.agregarObjetivoSistema(new Objetivo("Fondo de emergencia","2022-06-01", 50000, 100, 2));
     sistema.agregarObjetivoSistema(new Objetivo("Viaje soñado","2020-12-17", 10780, 5000, 3));
@@ -36,40 +39,43 @@ function mostrarObjetivo() {
     $("#historial-objetivos").removeClass('hide');
     $("#crear-objetivos").removeClass('hide');
 
-    let padre = document.getElementById("historial-objetivos");
-    padre.innerHTML = "";
+    $("#historial-objetivos").html(''); 
     
-    for (let objetivo of sistema.objetivos) {
 
+    for (let i = 0; i < sistema.objetivos.length; i++) {
+
+        let objetivo = sistema.objetivos[i];
+        
         let fecha = formatearFecha(objetivo.deadLine);
         let porcentaje = 0;
         if(objetivo.capitalActual > 0) {
             porcentaje = Math.floor((objetivo.capitalActual/objetivo.objetivo)*100);
         }
 
-        let newDiv = document.createElement("div");
-        newDiv.innerHTML = `<div class="col-sm-12 col-lg-4">
-                                <div class="card card-objetivos">
-                                    <div class="card-body">
-                                        <img src="Img/objetivo-roma.jpg" class="card-img-top img-objetivos">
-                                        <div class="separadores">
-                                            <p class="objetivo-deadline text-muted" style="font-size: smaller">Finaliza ${fecha}</p>
-                                            <p class="card-title">${objetivo.nombre}</p>
-                                        </div>
-                                        <div class="separadores">
-                                            <div class="progress">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: ${porcentaje}%" aria-valuenow="${porcentaje}" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                                <div>
-                                                    <p style="float: left;">$${objetivo.capitalActual}</p>
-                                                    <p style="float: right;">$${objetivo.objetivo}</p>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>`
-        objetivo.nombre;
-        padre.appendChild(newDiv);
+        $("#historial-objetivos").append(
+        `<div class="col-sm-12 col-lg-4"> 
+            <div class="card card-objetivos">
+                <div class="card-body">
+                    <img src="Img/objetivo-roma.jpg" class="card-img-top img-objetivos">
+                    <div class="separadores">
+                        <p class="objetivo-deadline text-muted" style="font-size: smaller">Finaliza ${fecha}</p>
+                        <h4 class="card-title">${objetivo.nombre} <span class="text-muted" style="font-size: 14px">$${objetivo.objetivo}</span></h4>
+                    </div>
+                    <div class="separadores">
+                        <div class="tooltip-custom">
+                            <span class="tooltiptext">
+                                <p class="inner-text">Ahorrado: $${objetivo.capitalActual}</p>
+                                <p class="inner-text">Restan: $${objetivo.objetivo - objetivo.capitalActual}</p>
+                            </span>
+                            <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: ${porcentaje}%" aria-valuenow="${porcentaje}" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: ${100 - porcentaje}%" aria-valuenow="${100 - porcentaje}" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`);
     }
 }
 
